@@ -1,5 +1,6 @@
 package com.kursach.salvadora2.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -10,6 +11,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 
 import com.kursach.salvadora2.GameInfo;
+import com.kursach.salvadora2.IntroActivity;
 import com.kursach.salvadora2.R;
 
 
@@ -38,7 +40,7 @@ public class PlayersCountFragment extends Fragment {
                 int playersCount = Integer.parseInt(etPlayersCount.getText().toString());
                 if ((playersCount <= 7)&&(playersCount >= 3)) {
                     gameInfo.setPlayersCount(playersCount);
-                    //Старт обучающего активити
+                    startActivity(new Intent(getContext(), IntroActivity.class));
                 }
             }
         });

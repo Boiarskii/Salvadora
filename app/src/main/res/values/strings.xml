@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">Salvadora2</string>
     <string name="action_settings">Settings</string>
+    <string name="intro_title_first">Выбор персонажа</string>
+    <string name="intro_title_second">Ведущий</string>
+    <string name="intro_title_third">Ассоциация</string>
+    <string name="intro_title_fourth">Остальные игроки</string>
+    <string name="intro_title_fifth">Последний шаг</string>
+
+
+    <string name="intro_description_first">Привет! После обучения игроки должны выбрать персонажей.</string>
+    <string name="intro_description_second">Один из игроков становится ведущим.</string>
+    <string name="intro_description_third">Ведущий выбирает одну из своих карточек и придумывает НЕОЧЕВИДНУЮ ассоциацию.</string>
+    <string name="intro_description_fourth">Каждый из игроков выбирает одну из своих карточек под ассоциацию ведущего.</string>
+    <string name="intro_description_fifth">Чтобы победить, ведущему нужно сделать так, чтобы его карту угадал хотя бы один человек, а ещё лучше — все, кроме одного.</string>
 </resources>
