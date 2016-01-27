@@ -2,10 +2,13 @@ package com.kursach.salvadora2;
 
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 
 import com.github.paolorotolo.appintro.AppIntro;
 import com.github.paolorotolo.appintro.AppIntroFragment;
+import com.kursach.salvadora2.fragments.AppIntroFinalFragment;
 import com.kursach.salvadora2.fragments.AppIntroFirstFragment;
+import com.kursach.salvadora2.fragments.PlayersChoiceFragment;
 
 public class IntroActivity extends AppIntro {
 
@@ -13,6 +16,7 @@ public class IntroActivity extends AppIntro {
     public void init(Bundle savedInstanceState) {
 
         AppIntroFirstFragment appIntroFirstFragment = new AppIntroFirstFragment();
+        AppIntroFinalFragment appIntroFinalFragment = new AppIntroFinalFragment();
 
         addSlide(appIntroFirstFragment);
         addSlide(AppIntroFragment.newInstance(
@@ -38,6 +42,7 @@ public class IntroActivity extends AppIntro {
                 R.drawable.introstep5,
                 getResources().getColor(R.color.introStep5)
         ));
+        addSlide(appIntroFinalFragment);
 
 
         showSkipButton(true);
@@ -47,7 +52,7 @@ public class IntroActivity extends AppIntro {
 
     @Override
     public void onSkipPressed() {
-
+        finish();
     }
 
     @Override
@@ -57,7 +62,7 @@ public class IntroActivity extends AppIntro {
 
     @Override
     public void onDonePressed() {
-
+        finish();
     }
 
     @Override

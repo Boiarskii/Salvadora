@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ivAddPlayerBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/namesdialog" />
+
+    <ImageView
+        android:id="@+id/nextButtonAddPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ivAddPlayerBackground"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/nextbutton" />
+
+    <EditText
+        android:id="@+id/etAddPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/nextButtonAddPlayer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:minEms="2"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="25sp">
+
+        <requestFocus />
+    </EditText>
+</RelativeLayout>

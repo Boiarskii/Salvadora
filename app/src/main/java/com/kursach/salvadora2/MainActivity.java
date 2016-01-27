@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
         ImageView mainActivityBG = (ImageView) findViewById(R.id.mainActivityBG);
 
-        Animation parallax = new ScaleAnimation(1.0f, 1.1f, 1.0f, 1.1f,
+        Animation parallax = new ScaleAnimation(1.0f, 1.15f, 1.0f, 1.15f,
                 Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
         parallax.setDuration(10000);
         parallax.setRepeatCount(-1);

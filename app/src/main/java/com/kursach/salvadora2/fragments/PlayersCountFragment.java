@@ -25,6 +25,14 @@ public class PlayersCountFragment extends Fragment {
     public PlayersCountFragment() {
     }
 
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        PlayersChoiceFragment playersChoiceFragment = new PlayersChoiceFragment();
+        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container,
+                playersChoiceFragment).commit();
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -37,13 +45,18 @@ public class PlayersCountFragment extends Fragment {
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int playersCount = Integer.parseInt(etPlayersCount.getText().toString());
-                if ((playersCount <= 7)&&(playersCount >= 3)) {
-                    gameInfo.setPlayersCount(playersCount);
-                    startActivity(new Intent(getContext(), IntroActivity.class));
+                try {
+                    int playersCount = Integer.parseInt(etPlayersCount.getText().toString());
+                    if ((playersCount <= 7)&&(playersCount >= 3)) {
+                        gameInfo.setPlayersCount(playersCount);
+                        startActivityForResult(new Intent(getContext(), IntroActivity.class), 1);
+                    }
+                } catch (NumberFormatException e) {
+                    e.printStackTrace();
                 }
             }
         });
+
 
         return v;
     }
