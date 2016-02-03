@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/tableBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/table" />
+
+    <TextView
+        android:id="@+id/tvAssociation"
+        android:gravity="center_horizontal"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/tvAssociation"
+        android:id="@+id/tableRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true" />
+
+</RelativeLayout>

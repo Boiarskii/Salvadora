@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ivAssociationDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/associationdialog" />
+
+    <ImageView
+        android:id="@+id/nextButtonAssociation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/etAssociationDialog"
+        android:layout_marginBottom="70dp"
+        android:src="@drawable/nextbutton2" />
+
+    <EditText
+        android:id="@+id/etAssociationDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ivAssociationDialog"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:minEms="2"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        />
+
+</RelativeLayout>

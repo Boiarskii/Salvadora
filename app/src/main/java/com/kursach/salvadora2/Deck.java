@@ -43,4 +43,10 @@ public class Deck {
         Collections.shuffle(cards);
     }
 
+    public Card getCard() {
+        Card card = cards.get(0);
+        cards.remove(0);
+        return card;
+    }
+
 }

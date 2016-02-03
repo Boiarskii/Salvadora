@@ -1,5 +1,6 @@
 package com.kursach.salvadora2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
@@ -35,5 +36,9 @@ public class MainActivity extends AppCompatActivity {
         PlayButtonFragment playButtonFragment = new PlayButtonFragment();
         fragmentManager.beginTransaction().replace(R.id.container, playButtonFragment).commit();
 
+    }
+
+    public void startGameActivity() {
+        startActivity(new Intent(this, GameActivity.class));
     }
 }

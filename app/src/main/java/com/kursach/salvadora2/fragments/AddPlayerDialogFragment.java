@@ -2,6 +2,7 @@ package com.kursach.salvadora2.fragments;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -17,7 +18,9 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+import com.kursach.salvadora2.GameActivity;
 import com.kursach.salvadora2.GameInfo;
+import com.kursach.salvadora2.MainActivity;
 import com.kursach.salvadora2.R;
 
 
@@ -98,10 +101,10 @@ public class AddPlayerDialogFragment extends DialogFragment {
                         gameInfo.addPlayer(etAddPlayer.getText().toString(), portraitNumber, false);
                         dismiss();
                     } else {
+                        //Если это последний, конец переборки
                         gameInfo.addPlayer(etAddPlayer.getText().toString(), portraitNumber, false);
-                        //Старт нового активити
+                        ((MainActivity) getActivity()).startGameActivity();
                         dismiss();
-                        getActivity().finish();
                     }
                 }
             }
