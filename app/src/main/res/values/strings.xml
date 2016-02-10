@@ -13,4 +13,5 @@
     <string name="intro_description_third">Ведущий выбирает одну из своих карточек и придумывает НЕОЧЕВИДНУЮ ассоциацию.</string>
     <string name="intro_description_fourth">Каждый из игроков выбирает одну из своих карточек под ассоциацию ведущего.</string>
     <string name="intro_description_fifth">Чтобы победить, ведущему нужно сделать так, чтобы его карту угадал хотя бы один человек, а ещё лучше — все, кроме одного.</string>
+    <string name="results">Результаты:</string>
 </resources>

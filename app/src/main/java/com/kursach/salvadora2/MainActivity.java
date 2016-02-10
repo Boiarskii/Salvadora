@@ -11,6 +11,7 @@ import android.widget.ImageView;
 
 
 import com.kursach.salvadora2.fragments.PlayButtonFragment;
+import com.kursach.salvadora2.fragments.ScoreFragment;
 
 public class MainActivity extends AppCompatActivity {
 

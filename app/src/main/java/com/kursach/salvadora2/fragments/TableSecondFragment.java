@@ -15,6 +15,7 @@ import com.kursach.salvadora2.AssociationDialogFragment;
 import com.kursach.salvadora2.Card;
 import com.kursach.salvadora2.Deck;
 import com.kursach.salvadora2.GameActivity;
+import com.kursach.salvadora2.GameInfo;
 import com.kursach.salvadora2.ItemClickSupport;
 import com.kursach.salvadora2.Player;
 import com.kursach.salvadora2.R;
@@ -29,6 +30,7 @@ public class TableSecondFragment extends Fragment {
 
     int step;
     Player player;
+    GameInfo gameInfo;
 
     Deck deck;
 
@@ -56,6 +58,8 @@ public class TableSecondFragment extends Fragment {
 
         deck = activity.getDeck();
 
+        gameInfo = GameInfo.getInstance();
+
         fulfillCards();
 
         final ArrayList<Card> cards = player.getCards();
@@ -67,9 +71,15 @@ public class TableSecondFragment extends Fragment {
             @Override
             public void onItemClicked(RecyclerView recyclerView, int position, View v) {
                 player.setPlayerMainCard(cards.get(position));
-                activity.setMainCard(cards.get(position));
                 player.removePlayerCard(position);
-                activity.nextStep();
+                if (step != gameInfo.getPlayersCount() - 1) {
+                    activity.nextStep();
+                } else {
+                    activity.setStep(1);
+                    ScrollSecondFragment scrollSecondFragment = new ScrollSecondFragment();
+                    activity.getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.container2, scrollSecondFragment).commit();
+                }
             }
         });
 

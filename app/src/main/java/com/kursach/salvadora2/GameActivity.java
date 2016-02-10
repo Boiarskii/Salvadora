@@ -17,6 +17,8 @@ public class GameActivity extends AppCompatActivity {
 
     private GameInfo gameInfo;
 
+    Score score;
+
     private ArrayList<Player> players;
 
     private String association;
@@ -39,6 +41,8 @@ public class GameActivity extends AppCompatActivity {
 
         players = gameInfo.getPlayers();
 
+        score = Score.getInstance();
+        score.createScoresMap(players);
 
         ScrollFragment scrollFragment = new ScrollFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.container2, scrollFragment).commit();
@@ -81,6 +85,10 @@ public class GameActivity extends AppCompatActivity {
         return step;
     }
 
+    public void setStep(int step) {
+        this.step = step;
+    }
+
     public Card getMainCard() {
         return mainCard;
     }
@@ -113,5 +121,9 @@ public class GameActivity extends AppCompatActivity {
             getSupportFragmentManager().beginTransaction().replace(R.id.container2,
                     tableSecondFragment).commit();
         }
+    }
+
+    public void nextAlternativeStep() {
+        ++step;
     }
 }

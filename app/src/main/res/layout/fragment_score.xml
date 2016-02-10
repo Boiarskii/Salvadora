@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/book" />
+
+    <ImageView
+        android:id="@+id/resultCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="195dp"
+        android:layout_marginStart="195dp" />
+
+    <TextView
+        android:id="@+id/tvResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/resultCard"
+        android:layout_marginLeft="42dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="71dp"
+        android:layout_toEndOf="@+id/resultCard"
+        android:layout_toRightOf="@+id/resultCard"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/results"
+        android:textColor="@color/fontBrownColor"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/tvScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvResults"
+        android:layout_below="@+id/tvResults"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@color/fontBrownColor"
+        android:textSize="25sp" />
+
+</RelativeLayout>
