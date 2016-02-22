@@ -126,4 +126,9 @@ public class GameActivity extends AppCompatActivity {
     public void nextAlternativeStep() {
         ++step;
     }
+
+    @Override
+    public void onBackPressed() {
+
+    }
 }
